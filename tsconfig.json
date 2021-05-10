@@ -10,7 +10,8 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["app/*"],
-      "@/*": ["app/*"]
+      "@/*": ["app/*"],
+      "*": ["node_modules/*"]
     },
     "typeRoots": ["types"],
     "types": ["node"],
