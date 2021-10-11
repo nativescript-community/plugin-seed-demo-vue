@@ -1,8 +1,11 @@
 const webpack = require('@nativescript/webpack');
 
-const { DefinePlugin } = require('webpack');
-
 module.exports = (env) => {
+    webpack.Utils.addCopyRule({
+        from: '../demo-snippets/assets',
+        to: '.'
+    });
+
     webpack.init(env);
 
     const { redirect } = env;
