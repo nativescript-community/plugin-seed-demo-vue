@@ -1,10 +1,13 @@
 const webpack = require('@nativescript/webpack');
+const fs = require('fs');
 
 module.exports = (env) => {
-    webpack.Utils.addCopyRule({
-        from: '../demo-snippets/assets',
-        to: '.'
-    });
+    if (fs.existsSync('../demo-snippets/assets')) {
+        webpack.Utils.addCopyRule({
+            from: '../demo-snippets/assets',
+            to: '.'
+        });
+    }
 
     webpack.init(env);
 
