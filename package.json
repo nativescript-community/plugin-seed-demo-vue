@@ -14,9 +14,6 @@
     "publishConfig": {
         "access": "public"
     },
-    "scripts": {
-        "preinstall": "node preinstall.js"
-    },
     "files": [
         "app",
         "App_Resources",
