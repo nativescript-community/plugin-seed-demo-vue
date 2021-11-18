@@ -21,6 +21,6 @@
     "emitDecoratorMetadata": true,
     "skipLibCheck": true
   },
-  "include": ["app", "types"],
+  "include": ["app", "types", "../demo-snippets"],
   "exclude": ["node_modules", "platforms"]
 }
