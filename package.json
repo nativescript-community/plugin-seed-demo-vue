@@ -15,7 +15,7 @@
         "access": "public"
     },
     "scripts": {
-        "preinstall": "node preinstall.js"
+        "postinstall": "npm --prefix ../demo-snippets install ../demo-snippets"
     },
     "files": [
         "app",
@@ -43,10 +43,12 @@
     "dependencies": {
         "@nativescript/core": "8.1.1",
         "@nativescript/theme": "~3.0.1",
-        "nativescript-vue": "~2.9.0"
+        "@nativescript-community/template-snippet": "file:../demo-snippets",
+        "nativescript-vue": "~2.9.0",
     },
     "devDependencies": {
         "@nativescript/android": "8.1.1",
+        "@nativescript/ios": "6.5.4",
         "@nativescript/types": "8.1.1",
         "@nativescript/webpack": "~5.0.0",
         "@types/node": "~14.6.2",
