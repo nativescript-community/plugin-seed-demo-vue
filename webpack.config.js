@@ -9,6 +9,20 @@ module.exports = (env) => {
         });
     }
 
+    if (fs.existsSync('../demo-snippets/App_Resources/Android')) {
+        webpack.Utils.addCopyRule({
+            from: '../demo-snippets/App_Resources/Android',
+            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources'
+        });
+    }
+
+    if (fs.existsSync('../demo-snippets/App_Resources/iOS')) {
+        webpack.Utils.addCopyRule({
+            from: '../demo-snippets/App_Resources/iOS',
+            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources'
+        });
+    }
+
     webpack.init(env);
 
     const { redirect } = env;
