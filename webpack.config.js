@@ -28,6 +28,7 @@ module.exports = (env) => {
     const { redirect } = env;
 
     webpack.chainWebpack((config) => {
+        config.resolve.modules.add(resolve(__dirname, '../demo-snippets/node_modules'));
         config.plugin('DefinePlugin').tap((args) => {
             if (redirect) {
                 Object.assign(args[0], {
