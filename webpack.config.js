@@ -37,7 +37,7 @@ module.exports = (env) => {
                 });
             } else {
                 Object.assign(args[0], {
-                    demoRedirect: JSON.stringify("")
+                    demoRedirect: JSON.stringify('')
                 });
             }
             return args;

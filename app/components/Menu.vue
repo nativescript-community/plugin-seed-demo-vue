@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { demos } from '../../../demo-snippets/vue/install'
+import { demos } from '../../../demo-snippets/vue/install';
 declare const demoRedirect: string;
 
 export default {
