@@ -41,9 +41,9 @@
         "category-general"
     ],
     "dependencies": {
+        "@nativescript-community/template-snippet": "file:../demo-snippets",
         "@nativescript/core": "8.1.1",
         "@nativescript/theme": "~3.0.1",
-        "@nativescript-community/template-snippet": "file:../demo-snippets",
         "nativescript-vue": "~2.9.0"
     },
     "devDependencies": {
