@@ -13,14 +13,14 @@ module.exports = (env) => {
     if (fs.existsSync('../demo-snippets/App_Resources/Android')) {
         webpack.Utils.addCopyRule({
             from: '../demo-snippets/App_Resources/Android',
-            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources'
+            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources/Android'
         });
     }
 
     if (fs.existsSync('../demo-snippets/App_Resources/iOS')) {
         webpack.Utils.addCopyRule({
             from: '../demo-snippets/App_Resources/iOS',
-            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources'
+            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources/iOS'
         });
     }
 
