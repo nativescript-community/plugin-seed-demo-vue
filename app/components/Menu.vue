@@ -35,8 +35,9 @@ export default {
         }
     },
     methods: {
-        goToDemo(component) {
-            this.$navigateTo(component, {
+        async goToDemo(component) {
+            try {
+            await this.$navigateTo(component, {
                 animated: true,
                 transition: {
                     name: 'slideLeft',
@@ -44,6 +45,9 @@ export default {
                     curve: 'ease'
                 }
             });
+            } catch(err){
+                console.error(err)
+            }
         }
     }
 };
