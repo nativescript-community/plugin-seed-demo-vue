@@ -2,6 +2,11 @@ const webpack = require('@nativescript/webpack');
 const fs = require('fs');
 const { resolve } = require('path');
 
+let snippetConfig;
+if (fs.existsSync('../demo-snippets/webpack.config.vue.js')) {
+    snippetConfig = require('../demo-snippets/webpack.config.vue.js');
+}
+
 module.exports = (env) => {
     if (fs.existsSync('../demo-snippets/assets')) {
         webpack.Utils.addCopyRule({
@@ -27,6 +32,10 @@ module.exports = (env) => {
     webpack.init(env);
 
     const { redirect } = env;
+
+    if (snippetConfig) {
+        snippetConfig(env);
+    }
 
     webpack.chainWebpack((config) => {
         config.resolve.modules.add(resolve(__dirname, '../demo-snippets/node_modules'));
