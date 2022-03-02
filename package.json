@@ -57,5 +57,10 @@
         "vue": "~2.6.12"
     },
     "private": "true",
-    "readme": "NativeScript Application"
+    "readme": "NativeScript Application",
+    "dependenciesMeta": {
+        "@nativescript-community/template-snippet": {
+            "injected": true
+        }
+    }
 }
