@@ -14,9 +14,6 @@
     "publishConfig": {
         "access": "public"
     },
-    "scripts": {
-        "postinstall": "npm --prefix ../demo-snippets install ../demo-snippets"
-    },
     "files": [
         "app",
         "App_Resources",
