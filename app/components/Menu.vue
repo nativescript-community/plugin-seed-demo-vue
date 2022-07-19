@@ -37,16 +37,16 @@ export default {
     methods: {
         async goToDemo(component) {
             try {
-            await this.$navigateTo(component, {
-                animated: true,
-                transition: {
-                    name: 'slideLeft',
-                    duration: 200,
-                    curve: 'ease'
-                }
-            });
-            } catch(err){
-                console.error(err)
+                await this.$navigateTo(component, {
+                    animated: true,
+                    transition: {
+                        name: 'slideLeft',
+                        duration: 200,
+                        curve: 'ease'
+                    }
+                });
+            } catch (err) {
+                console.error(err, err.stack);
             }
         }
     }
