@@ -37,7 +37,7 @@
         "category-general"
     ],
     "dependencies": {
-        "@nativescript-community/template-snippet": "file:../demo-snippets",
+        "@nativescript-community/template-snippet": "link:../demo-snippets",
         "@nativescript/core": "~8.2.5",
         "@nativescript/theme": "~3.0.2",
         "nativescript-vue": "~2.9.2"
