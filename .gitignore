@@ -25,3 +25,5 @@ package-lock.json
 # Visual Studio Code
 .vscode/*
 pnpm-lock.yaml
+/yarn.lock
+/.yarn
