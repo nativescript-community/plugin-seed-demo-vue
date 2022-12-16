@@ -1,5 +1,6 @@
 {
     "name": "@nativescript/template-blank-vue-ts",
+    "private": true,
     "main": "app/app.ts",
     "displayName": "Blank Vue Typescript",
     "version": "8.0.2",
