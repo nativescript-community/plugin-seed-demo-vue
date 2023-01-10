@@ -11,7 +11,7 @@ module.exports = (env) => {
     if (fs.existsSync('../demo-snippets/assets')) {
         webpack.Utils.addCopyRule({
             from: '../demo-snippets/assets',
-            to: '.'
+            to: './assets'
         });
     }
     if (fs.existsSync('../demo-snippets/App_Resources/Android')) {
