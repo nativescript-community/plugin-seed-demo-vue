@@ -36,6 +36,16 @@ module.exports = (env) => {
     }
 
     webpack.chainWebpack((config) => {
+        if (env.fork) {
+            const coreModulesPackageName = '@akylas/nativescript';
+            config.resolve.modules
+                .clear()
+                .merge([resolve(__dirname, `node_modules/${coreModulesPackageName}`), resolve(__dirname, 'node_modules'), `node_modules/${coreModulesPackageName}`, 'node_modules']);
+            config.resolve.alias.merge({
+                '@nativescript/core': `${coreModulesPackageName}`,
+                'tns-core-modules': `${coreModulesPackageName}`
+            });
+        }
         config.resolve.modules.add(resolve(__dirname, '../demo-snippets/node_modules'));
         config.plugin('DefinePlugin').tap((args) => {
             if (redirect) {
