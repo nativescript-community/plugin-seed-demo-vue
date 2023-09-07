@@ -46,7 +46,7 @@ module.exports = (env) => {
                 'tns-core-modules': `${coreModulesPackageName}`
             });
         }
-        config.resolve.modules.add(resolve(__dirname, '../demo-snippets/node_modules'));
+        config.resolve.modules.prepend(resolve(__dirname, '../demo-snippets/node_modules'));
         config.plugin('DefinePlugin').tap((args) => {
             if (redirect) {
                 Object.assign(args[0], {
