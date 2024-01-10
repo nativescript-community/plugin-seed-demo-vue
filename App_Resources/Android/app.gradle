@@ -10,8 +10,10 @@
 // create a file named before-plugins.gradle in the current directory and place it there
 
 android {
+  compileSdkVersion 34
   defaultConfig {
     minSdkVersion 17
+    targetSdkVersion 34
     generatedDensities = []
     multiDexEnabled true
   }
