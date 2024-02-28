@@ -7,7 +7,7 @@ if (fs.existsSync('../demo-snippets/webpack.config.vue.js')) {
     snippetConfig = require('../demo-snippets/webpack.config.vue.js');
 }
 
-module.exports = (env) => {
+module.exports = (env, params = {}) => {
     if (fs.existsSync('../demo-snippets/assets')) {
         webpack.Utils.addCopyRule({
             from: '../demo-snippets/assets',
@@ -61,5 +61,10 @@ module.exports = (env) => {
         });
     });
 
-    return webpack.resolveConfig();
+    let config = webpack.resolveConfig();
+    if (snippetConfig && snippetConfig.onWebpackConfig) {
+        config = snippetConfig.onWebpackConfig(config, env, params);
+    }
+
+    return config;
 };
