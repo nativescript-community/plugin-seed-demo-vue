@@ -14,6 +14,12 @@ module.exports = (env, params = {}) => {
             to: './assets'
         });
     }
+    if (fs.existsSync('../demo-snippets/fonts')) {
+        webpack.Utils.addCopyRule({
+            from: '../demo-snippets/fonts',
+            to: './fonts'
+        });
+    }
     if (fs.existsSync('../demo-snippets/App_Resources/Android')) {
         webpack.Utils.addCopyRule({
             from: '../demo-snippets/App_Resources/Android',
