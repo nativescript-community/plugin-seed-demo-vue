@@ -7,11 +7,17 @@ if (fs.existsSync('../demo-snippets/webpack.config.vue.js')) {
     snippetConfig = require('../demo-snippets/webpack.config.vue.js');
 }
 
-module.exports = (env) => {
+module.exports = (env, params = {}) => {
     if (fs.existsSync('../demo-snippets/assets')) {
         webpack.Utils.addCopyRule({
             from: '../demo-snippets/assets',
             to: './assets'
+        });
+    }
+    if (fs.existsSync('../demo-snippets/fonts')) {
+        webpack.Utils.addCopyRule({
+            from: '../demo-snippets/fonts',
+            to: './fonts'
         });
     }
     if (fs.existsSync('../demo-snippets/App_Resources/Android')) {
@@ -61,5 +67,10 @@ module.exports = (env) => {
         });
     });
 
-    return webpack.resolveConfig();
+    let config = webpack.resolveConfig();
+    if (snippetConfig && snippetConfig.onWebpackConfig) {
+        config = snippetConfig.onWebpackConfig(config, env, params);
+    }
+
+    return config;
 };

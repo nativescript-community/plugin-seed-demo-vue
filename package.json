@@ -38,7 +38,7 @@
         "category-general"
     ],
     "dependencies": {
-        "@nativescript-community/template-snippet": "*",
+        "@nativescript-community/template-snippet": "0.0.1",
         "@nativescript/core": "~8.8.2",
         "@nativescript/theme": "~3.1.0",
         "nativescript-vue": "~2.9.3"
