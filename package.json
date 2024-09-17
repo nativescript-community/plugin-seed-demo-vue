@@ -39,16 +39,16 @@
     ],
     "dependencies": {
         "@nativescript-community/template-snippet": "*",
-        "@nativescript/core": "~8.6.2",
-        "@nativescript/theme": "~3.0.2",
+        "@nativescript/core": "~8.8.2",
+        "@nativescript/theme": "~3.1.0",
         "nativescript-vue": "~2.9.3"
     },
     "devDependencies": {
-        "@akylas/nativescript": "~8.6.4",
-        "@nativescript/android": "~8.6.2",
-        "@nativescript/ios": "8.6.3",
-        "@nativescript/types": "~8.6.1",
-        "@nativescript/webpack": "5.0.18",
+        "@akylas/nativescript": "~8.8.3",
+        "@nativescript/android": "~8.8.4",
+        "@nativescript/ios": "8.8.2",
+        "@nativescript/types": "~8.8.0",
+        "@nativescript/webpack": "5.0.22",
         "@types/node": "~18.11.19",
         "nativescript-vue-template-compiler": "~2.9.3",
         "typescript": "5.3.3",
