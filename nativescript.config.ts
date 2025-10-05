@@ -5,6 +5,7 @@ export default {
     appPath: 'app',
     appResourcesPath: 'App_Resources',
     android: {
+        gradleVersion: '8.10.2',
         v8Flags: '--expose_gc',
         markingMode: 'none'
     }
