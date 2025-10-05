@@ -38,20 +38,20 @@
         "category-general"
     ],
     "dependencies": {
-        "@nativescript-community/template-snippet": "0.0.1",
-        "@nativescript/core": "~8.8.2",
+        "@nativescript-community/template-snippet": "*",
+        "@nativescript/core": "~8.9.9",
         "@nativescript/theme": "~3.1.0",
         "nativescript-vue": "~2.9.3"
     },
     "devDependencies": {
-        "@akylas/nativescript": "~8.8.3",
-        "@nativescript/android": "~8.8.4",
-        "@nativescript/ios": "8.8.2",
-        "@nativescript/types": "~8.8.0",
-        "@nativescript/webpack": "5.0.22",
+        "@akylas/nativescript": "~8.9.10",
+        "@nativescript/android": "~8.9.2",
+        "@nativescript/ios": "8.9.4",
+        "@nativescript/types": "~8.9.1",
+        "@nativescript/webpack": "5.0.24",
         "@types/node": "~18.11.19",
         "nativescript-vue-template-compiler": "~2.9.3",
-        "typescript": "5.3.3",
+        "typescript": "5.9.3",
         "vue": "^2.7.16"
     },
     "readme": "NativeScript Application"
