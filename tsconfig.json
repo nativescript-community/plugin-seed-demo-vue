@@ -14,7 +14,6 @@
             "@/*": ["app/*"]
         },
         "types": ["node"],
-        "typeRoots": ["types"],
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
         "experimentalDecorators": true,
