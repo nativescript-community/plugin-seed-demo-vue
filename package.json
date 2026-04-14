@@ -46,7 +46,7 @@
     "devDependencies": {
         "@akylas/nativescript": "8.9.10",
         "@nativescript/android": "8.9.2",
-        "@nativescript/ios": "8.9.4",
+        "@nativescript/ios": "8.9.5",
         "@nativescript/types": "8.9.1",
         "@nativescript/webpack": "5.0.24",
         "@types/node": "24.7.0",

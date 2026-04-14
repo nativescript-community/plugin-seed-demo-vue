@@ -1,4 +1,5 @@
-const webpack = require('@nativescript/webpack');
+const nsWebpack = require('@nativescript/webpack');
+const webpack = require('webpack');
 const fs = require('fs');
 const { resolve } = require('path');
 
@@ -9,39 +10,39 @@ if (fs.existsSync('../demo-snippets/webpack.config.vue.js')) {
 
 module.exports = (env, params = {}) => {
     if (fs.existsSync('../demo-snippets/assets')) {
-        webpack.Utils.addCopyRule({
+        nsWebpack.Utils.addCopyRule({
             from: '../demo-snippets/assets',
             to: './assets'
         });
     }
     if (fs.existsSync('../demo-snippets/fonts')) {
-        webpack.Utils.addCopyRule({
+        nsWebpack.Utils.addCopyRule({
             from: '../demo-snippets/fonts',
             to: './fonts'
         });
     }
     if (fs.existsSync('../demo-snippets/App_Resources/Android')) {
-        webpack.Utils.addCopyRule({
+        nsWebpack.Utils.addCopyRule({
             from: '../demo-snippets/App_Resources/Android',
-            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources/Android'
+            to: nsWebpack.Utils.project.getProjectRootPath() + '/App_Resources/Android'
         });
     }
 
     if (fs.existsSync('../demo-snippets/App_Resources/iOS')) {
-        webpack.Utils.addCopyRule({
+        nsWebpack.Utils.addCopyRule({
             from: '../demo-snippets/App_Resources/iOS',
-            to: webpack.Utils.project.getProjectRootPath() + '/App_Resources/iOS'
+            to: nsWebpack.Utils.project.getProjectRootPath() + '/App_Resources/iOS'
         });
     }
-    webpack.init(env);
+    nsWebpack.init(env);
 
     const { redirect } = env;
 
     if (snippetConfig) {
-        snippetConfig(env, webpack);
+        snippetConfig(env, nsWebpack, webpack);
     }
 
-    webpack.chainWebpack((config) => {
+    nsWebpack.chainWebpack((config) => {
         if (env.fork) {
             const coreModulesPackageName = '@akylas/nativescript';
             config.resolve.modules
@@ -67,9 +68,9 @@ module.exports = (env, params = {}) => {
         });
     });
 
-    let config = webpack.resolveConfig();
+    let config = nsWebpack.resolveConfig();
     if (snippetConfig && snippetConfig.onWebpackConfig) {
-        config = snippetConfig.onWebpackConfig(config, env, params);
+        config = snippetConfig.onWebpackConfig(config, env, params, nsWebpack, webpack);
     }
 
     return config;
